@@ -5,36 +5,42 @@
 # TODO: docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: docker logs <container_name_or_id>/64fcdea4ce38
+# TODO: docker logs <container_name_or_id>/35ca98b0f014
 
 ## Logs from the container running the TechTrends application
 # TODO:  
-* Serving Flask app 'app' (lazy loading)
+ * Serving Flask app 'app' (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: off
-2023-02-15 06:44:46,400 - WARNING -  * Running on all addresses.
+2023-02-15 08:26:24,697 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2023-02-15 06:44:46,400 - INFO -  * Running on http://172.17.0.3:3111/ (Press CTRL+C to quit)
-2023-02-15 06:44:54,480 - INFO - 172.17.0.1 - - [15/Feb/2023 06:44:54] "GET /metrics HTTP/1.1" 200 -
-2023-02-15 06:44:57,073 - INFO - 172.17.0.1 - - [15/Feb/2023 06:44:57] "GET / HTTP/1.1" 200 -
-2023-02-15 06:44:57,124 - INFO - 172.17.0.1 - - [15/Feb/2023 06:44:57] "GET /static/css/main.css HTTP/1.1" 404 -
-2023-02-15 06:45:42,193 - INFO - Article 2020 CNCF Annual Report retrieved!
-2023-02-15 06:45:42,206 - INFO - 172.17.0.1 - - [15/Feb/2023 06:45:42] "GET /1 HTTP/1.1" 200 -
-2023-02-15 06:45:42,259 - INFO - 172.17.0.1 - - [15/Feb/2023 06:45:42] "GET /static/css/main.css HTTP/1.1" 404 -
-2023-02-15 06:45:54,001 - INFO - 172.17.0.1 - - [15/Feb/2023 06:45:54] "GET /create HTTP/1.1" 200 -
-2023-02-15 06:45:54,046 - INFO - 172.17.0.1 - - [15/Feb/2023 06:45:54] "GET /static/css/main.css HTTP/1.1" 404 -
-2023-02-15 06:46:06,964 - INFO - New article created - Title: Test new post
-2023-02-15 06:46:06,970 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:06] "POST /create HTTP/1.1" 302 -
-2023-02-15 06:46:06,977 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:06] "GET / HTTP/1.1" 200 -
-2023-02-15 06:46:07,036 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:07] "GET /static/css/main.css HTTP/1.1" 404 -
-2023-02-15 06:46:17,576 - INFO - Article Test new post retrieved!
-2023-02-15 06:46:17,578 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:17] "GET /7 HTTP/1.1" 200 -
-2023-02-15 06:46:17,627 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:17] "GET /static/css/main.css HTTP/1.1" 404 -
-2023-02-15 06:46:33,234 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:33] "GET /healthz HTTP/1.1" 200 -
-2023-02-15 06:46:38,897 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:38] "GET /metrics HTTP/1.1" 200 -
-2023-02-15 06:46:48,321 - WARNING - Non-existing article accessed - Article ID: 10
-2023-02-15 06:46:48,331 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:48] "GET /10 HTTP/1.1" 404 -
-2023-02-15 06:46:48,388 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:48] "GET /static/css/main.css HTTP/1.1" 404 -
+2023-02-15 08:26:24,697 - INFO -  * Running on http://172.17.0.3:3111/ (Press CTRL+C to quit)
+2023-02-15 08:26:31,738 - WARNING - Non-existing article accessed - Article ID: 10
+2023-02-15 08:26:31,748 - INFO - 172.17.0.1 - - [15/Feb/2023 08:26:31] "GET /10 HTTP/1.1" 404 -
+2023-02-15 08:26:31,829 - INFO - 172.17.0.1 - - [15/Feb/2023 08:26:31] "GET /static/css/main.css HTTP/1.1" 200 -
+2023-02-15 08:26:33,811 - INFO - 172.17.0.1 - - [15/Feb/2023 08:26:33] "GET / HTTP/1.1" 200 -
+2023-02-15 08:26:33,837 - INFO - 172.17.0.1 - - [15/Feb/2023 08:26:33] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-15 08:26:34,134 - INFO - 172.17.0.1 - - [15/Feb/2023 08:26:34] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-15 08:26:50,870 - INFO - Article 2020 CNCF Annual Report retrieved!
+2023-02-15 08:26:50,878 - INFO - 172.17.0.1 - - [15/Feb/2023 08:26:50] "GET /1 HTTP/1.1" 200 -
+2023-02-15 08:26:50,961 - INFO - 172.17.0.1 - - [15/Feb/2023 08:26:50] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-15 08:27:00,705 - INFO - About page retrieved
+2023-02-15 08:27:00,722 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:00] "GET /about HTTP/1.1" 200 -
+2023-02-15 08:27:00,789 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:00] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-15 08:27:06,023 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:06] "GET /create HTTP/1.1" 200 -
+2023-02-15 08:27:06,077 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:06] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-15 08:27:17,013 - INFO - New article created - Title: test title
+2023-02-15 08:27:17,019 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:17] "POST /create HTTP/1.1" 302 -
+2023-02-15 08:27:17,033 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:17] "GET / HTTP/1.1" 200 -
+2023-02-15 08:27:17,086 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:17] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-15 08:27:23,783 - INFO - Article test title retrieved!
+2023-02-15 08:27:23,787 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:23] "GET /7 HTTP/1.1" 200 -
+2023-02-15 08:27:23,842 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:23] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-15 08:27:29,904 - WARNING - Non-existing article accessed - Article ID: 10
+2023-02-15 08:27:29,909 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:29] "GET /10 HTTP/1.1" 404 -
+2023-02-15 08:27:29,959 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:29] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-15 08:27:46,223 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:46] "GET /healthz HTTP/1.1" 200 -
+2023-02-15 08:27:52,933 - INFO - 172.17.0.1 - - [15/Feb/2023 08:27:52] "GET /metrics HTTP/1.1" 200 -
 

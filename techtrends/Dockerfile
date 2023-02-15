@@ -13,6 +13,7 @@ COPY init_db.py .
 COPY templates templates
 COPY requirements.txt .
 COPY schema.sql .
+COPY static static
 
 # install defined package
 RUN pip install -r requirements.txt
