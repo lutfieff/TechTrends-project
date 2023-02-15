@@ -23,10 +23,13 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          dockerfile: Dockerfile
-          push: true
-          tags: lutfieff/techtrends:$TAG
+#        uses: docker/build-push-action@v2
+#        with:
+#          context: .
+#          dockerfile: Dockerfile
+#          push: true
+#          tags: lutfieff/techtrends:$TAG
+        run: |
+          docker build -f Dockerfile --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') .
+          docker push lutfieff/techtrends:$TAG
 
