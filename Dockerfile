@@ -15,6 +15,8 @@ COPY techtrends/requirements.txt .
 COPY techtrends/schema.sql .
 COPY techtrends/static static
 
+LABEL org.opencontainers.image.created=$BUILD_DATE
+
 # install defined package
 RUN pip install -r requirements.txt
 
