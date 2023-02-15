@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: techtrends
+  namespace: {{ .Values.namespace }}
   labels:
     app: techtrends
 spec:
