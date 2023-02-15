@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
   
     env:
-      TAG: ${{ github.run_number }}
+      TAG: $(date +%s)
 
     steps:
       - name: Checkout code
@@ -30,6 +30,6 @@ jobs:
 #          push: true
 #          tags: lutfieff/techtrends:$TAG
         run: |
-          docker build -f Dockerfile --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') .
-          docker push lutfieff/techtrends:$TAG
+          docker build -f Dockerfile --tag techtrends:$(date +%s)
+          docker push lutfieff/techtrends$TAG
 
