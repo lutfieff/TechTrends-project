@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "techtrends.fullname" . }}
+  name: techtrends
   labels:
-    app: {{ include "techtrends.name" . }}
+    app: techtrends
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "techtrends.name" . }}
+      app: techtrends
   template:
     metadata:
       labels:
-        app: {{ include "techtrends.name" . }}
+        app: techtrends
     spec:
       containers:
-        - name: {{ include "techtrends.name" . }}
+        - name: techtrends
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
