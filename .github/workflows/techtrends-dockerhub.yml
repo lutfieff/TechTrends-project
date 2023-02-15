@@ -20,7 +20,6 @@ jobs:
           # list of Docker images to use as base name for tags
           images: |
             lutfieff/techtrends
-            ghcr.io/lutfieff/techtrends
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule
