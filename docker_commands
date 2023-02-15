@@ -1,0 +1,40 @@
+## Docker commands used to build the application 
+# TODO: docker build -f Dockerfile -t techtrends .
+
+## Docker commands used to run the application
+# TODO: docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+# TODO: docker logs <container_name_or_id>/64fcdea4ce38
+
+## Logs from the container running the TechTrends application
+# TODO:  
+* Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2023-02-15 06:44:46,400 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2023-02-15 06:44:46,400 - INFO -  * Running on http://172.17.0.3:3111/ (Press CTRL+C to quit)
+2023-02-15 06:44:54,480 - INFO - 172.17.0.1 - - [15/Feb/2023 06:44:54] "GET /metrics HTTP/1.1" 200 -
+2023-02-15 06:44:57,073 - INFO - 172.17.0.1 - - [15/Feb/2023 06:44:57] "GET / HTTP/1.1" 200 -
+2023-02-15 06:44:57,124 - INFO - 172.17.0.1 - - [15/Feb/2023 06:44:57] "GET /static/css/main.css HTTP/1.1" 404 -
+2023-02-15 06:45:42,193 - INFO - Article 2020 CNCF Annual Report retrieved!
+2023-02-15 06:45:42,206 - INFO - 172.17.0.1 - - [15/Feb/2023 06:45:42] "GET /1 HTTP/1.1" 200 -
+2023-02-15 06:45:42,259 - INFO - 172.17.0.1 - - [15/Feb/2023 06:45:42] "GET /static/css/main.css HTTP/1.1" 404 -
+2023-02-15 06:45:54,001 - INFO - 172.17.0.1 - - [15/Feb/2023 06:45:54] "GET /create HTTP/1.1" 200 -
+2023-02-15 06:45:54,046 - INFO - 172.17.0.1 - - [15/Feb/2023 06:45:54] "GET /static/css/main.css HTTP/1.1" 404 -
+2023-02-15 06:46:06,964 - INFO - New article created - Title: Test new post
+2023-02-15 06:46:06,970 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:06] "POST /create HTTP/1.1" 302 -
+2023-02-15 06:46:06,977 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:06] "GET / HTTP/1.1" 200 -
+2023-02-15 06:46:07,036 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:07] "GET /static/css/main.css HTTP/1.1" 404 -
+2023-02-15 06:46:17,576 - INFO - Article Test new post retrieved!
+2023-02-15 06:46:17,578 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:17] "GET /7 HTTP/1.1" 200 -
+2023-02-15 06:46:17,627 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:17] "GET /static/css/main.css HTTP/1.1" 404 -
+2023-02-15 06:46:33,234 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:33] "GET /healthz HTTP/1.1" 200 -
+2023-02-15 06:46:38,897 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:38] "GET /metrics HTTP/1.1" 200 -
+2023-02-15 06:46:48,321 - WARNING - Non-existing article accessed - Article ID: 10
+2023-02-15 06:46:48,331 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:48] "GET /10 HTTP/1.1" 404 -
+2023-02-15 06:46:48,388 - INFO - 172.17.0.1 - - [15/Feb/2023 06:46:48] "GET /static/css/main.css HTTP/1.1" 404 -
+
