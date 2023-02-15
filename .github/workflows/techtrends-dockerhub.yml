@@ -18,9 +18,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
+        TAG: ${{ github.sha }}
         with:
           context: .
           dockerfile: Dockerfile
           push: true
-          tags: lutfieff/techtrends:latest
+          tags: lutfieff/techtrends:$TAG
 

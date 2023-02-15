@@ -79,9 +79,34 @@ def create():
 
     return render_template('create.html')
 
+#@app.route('/healthz')
+#def health_check():
+#    return 'OK - healthy', 200
+
 @app.route('/healthz')
 def health_check():
-    return 'OK - healthy', 200
+    try:
+        # Attempt to connect to the database
+        connection = get_db_connection()
+        cursor = connection.cursor()
+
+        # Check if the required table exists
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='posts';")
+        table_exists = cursor.fetchone() is not None
+
+        # Close the database connection
+        connection.close()
+
+        # Return a 500 error if the required table does not exist
+        if not table_exists:
+            return jsonify({'status': 'error', 'message': 'The posts table does not exist.'}), 500
+
+        # If the code reaches this point, the application is healthy
+        return jsonify({'status': 'OK - healthy'})
+
+    except:
+        # Return a 500 error if there is any other exception (e.g. failed database connection)
+        return jsonify({'status': 'error', 'message': 'The application is not healthy.'}), 500
 
 @app.route('/metrics')
 def metrics():
